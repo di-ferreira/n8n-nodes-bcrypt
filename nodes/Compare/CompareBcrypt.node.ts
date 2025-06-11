@@ -7,7 +7,7 @@ import {
 	NodeConnectionType,
 } from 'n8n-workflow';
 
-export class Compare implements INodeType {
+export class CompareBcrypt implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Compare Hash (bcrypt)',
 		name: 'compareBcrypt',

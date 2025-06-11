@@ -7,7 +7,7 @@ import {
 	NodeConnectionType,
 } from 'n8n-workflow';
 
-export class Encrypt implements INodeType {
+export class EncryptBcrypt implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Encrypt (bcrypt)',
 		name: 'encryptBcrypt',
