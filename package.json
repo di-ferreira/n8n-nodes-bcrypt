@@ -1,23 +1,25 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-bcrypt",
   "version": "0.1.0",
-  "description": "",
+  "description": "n8n-nodes-bcrypt é um conjunto de nós para encriptação texto e comparação de hashs",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Diego Ferreira",
+    "email": "diferreira.program@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/di-ferreira/n8n-nodes-bcrypt.git"
   },
   "engines": {
-    "node": ">=20.15"
+    "node": ">=20.15",
+    "pnpm": ">=10.4"
   },
+  "packageManager": "pnpm@10.4.1",
   "main": "index.js",
   "scripts": {
     "build": "npx rimraf dist && tsc && gulp build:icons",
@@ -32,13 +34,10 @@
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
-    ],
+    "credentials": [],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/Encrypt/EncryptBcrypt.node.js",
+      "dist/nodes/Compare/CompareBcrypt.node.js"
     ]
   },
   "devDependencies": {
@@ -47,7 +46,11 @@
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^5.0.0",
     "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
